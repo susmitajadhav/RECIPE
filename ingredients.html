@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Details</title>
+  <link rel="stylesheet" href="ingredients.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="recipe-details-container">
+    <!-- Header Section -->
+    <div class="header-section">
+      <h1 class="recipe-title" id="recipe-name">Recipe Name</h1>
+
+      <div class="rating-section">
+        <span class="rating" id="recipe-rating">4.5 ★★★★☆</span>
+        <span class="reviews" id="recipe-reviews">(10 Reviews)</span>
+        <span class="photos" id="recipe-photos">(2 Photos)</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Left Section: Image and Process -->
+      <div class="left-section">
+        <div class="image-container">
+          <img id="recipe-image" src="" alt="Recipe Image">
+        </div>
+
+        <div class="process-container">
+          <h3>Step-by-Step Process:</h3>
+          <div id="recipe-process">Process details here...</div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="ingredients-container">
+          <h3>Ingredients:</h3>
+          <div id="recipe-ingredients">Ingredients here...</div>
+        </div>
+        <div class="nutrition-container">
+          <h3>Recipe Details:</h3>
+          <table class="recipe-table">
+            <thead>
+              <tr>
+                <th>Serves</th>
+                <th>Course</th>
+                <th>Prepare</th>
+                <th>Cook</th>
+                <th>Total Time</th>
+              </tr>
+            </thead>
+            <tbody id="recipe-details">
+              <!-- Recipe details will be injected here -->
+            </tbody>
+          </table>
+          <h3>Nutrition Facts (per serving):</h3>
+          <table class="nutrition-table">
+            <thead>
+              <tr>
+                <th>Nutrient</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="nutrition-facts">
+              <!-- Nutrition facts will be injected here -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="youtube-container">
+          <h3>Watch Video</h3>
+          <div class="youtube-player">
+            <iframe id="recipe-video" width="100%" height="315" src="" title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Review Section -->
+  <div class="review-section">
+    <div class="button-group">
+      <button class="fancy-button">Save Recipe</button>
+      <button class="fancy-button">Print Recipe</button>
+    </div>
+    <h3>Your Rating</h3>
+    <form>
+      <div class="rating-input">
+        <input type="radio" name="rating" value="1"><span>★</span>
+        <input type="radio" name="rating" value="2"><span>★</span>
+        <input type="radio" name="rating" value="3"><span>★</span>
+        <input type="radio" name="rating" value="4"><span>★</span>
+        <input type="radio" name="rating" value="5"><span>★</span>
+      </div>
+      <div class="form-group">
+        <label for="review">Your Review</label><br>
+        <textarea id="review" rows="3"></textarea>
+      </div>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+    <div class="ratings-summary">
+      <h4>4.5 out of 5</h4>
+      <div>10 Ratings</div>
+      <div>
+        <div>5 star ★★★★★ (6)</div>
+        <div>4 star ★★★★☆ (3)</div>
+        <div>3 star ★★★☆☆ (1)</div>
+        <div>2 star ★★☆☆☆ (0)</div>
+        <div>1 star ★☆☆☆☆ (0)</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the query parameter from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const recipeName = urlParams.get('name');
+
+      const recipeData = {
+        'MargheritaPizza': {
+          name: 'Margherita Pizza',
+          image: "/All images/circle images/Pizza/margherita pizza.jpg",
+          rating: '4.5 ★★★★☆',
+          reviews: '(10 Reviews)',
+          photos: '(2 Photos)',
+          process: '1. Process step 1... 2. Process step 2...',
+          ingredients: '1. Ingredient 1... 2. Ingredient 2...',
+          details: {
+            serves: '4',
+            course: 'Main',
+            prepare: '15 min',
+            cook: '20 min',
+            totalTime: '35 min'
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/watch?v=sH-juTnjm-Y'
+        },
+        'PepperoniPizza': {
+          name: 'Pepperoni Pizza',
+          image: './All images/circle images/Pizza/Pepperoni-Pizza.jpg',
+          rating: '4.8 ★★★★★',
+          reviews: '(25 Reviews)',
+          photos: '(3 Photos)',
+          process: '1. Prepare the dough. 2. Spread sauce. 3. Add cheese and pepperoni. 4. Bake until golden brown.',
+          ingredients: '1. 1 pizza dough. 2. 1 cup pizza sauce. 3. 2 cups shredded mozzarella. 4. 1 cup pepperoni slices.',
+          details: {
+            serves: '4',
+            course: 'Main',
+            prepare: '20 min',
+            cook: '15 min',
+            totalTime: '35 min'
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '300' },
+            { nutrient: 'Total Fat', amount: '15g' },
+            { nutrient: 'Saturated Fat', amount: '6g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+        'HawaiianPizza': {
+          name: 'Hawaiian Pizza',
+          image: "./All images/circle images/Pizza/hawaiian pizza.jpg",
+          rating: '4.6 ★★★★☆',
+          reviews: '(22 Reviews)',
+          photos: '(4 Photos)',
+          process: '1. Prepare the dough and press into a round pan. 2. Spread tomato sauce evenly. 3. Add toppings (ham, pineapple chunks). 4. Top with mozzarella cheese and bake.',
+          ingredients: '1. 1 pizza dough. 2. 1/2 cup tomato sauce. 3. 1/2 cup sliced ham. 4. 1/2 cup pineapple chunks. 5. 1 cup shredded mozzarella.',
+          details: {
+            serves: '4',
+            course: 'Main',
+            prepare: '20 min',
+            cook: '15 min',
+            totalTime: '35 min'
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '430' },
+            { nutrient: 'Total Fat', amount: '20g' },
+            { nutrient: 'Saturated Fat', amount: '9g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/hawaiianpizzaexample'
+        },
+        'MeatPizza': {
+          name: 'Meat Pizza',
+          image: "./All images/circle images/Pizza/meat pizza.jpg",
+          rating: '4.7 ★★★★☆',
+          reviews: '(15 Reviews)',
+          photos: '(3 Photos)',
+          process: '1. Prepare the dough. 2. Spread tomato sauce. 3. Add cooked meat (sausage, bacon). 4. Top with cheese and bake until golden.',
+          ingredients: '1. 1 pizza dough. 2. 1/2 cup tomato sauce. 3. 1/2 cup cooked sausage. 4. 1/2 cup bacon bits. 5. 1 cup shredded mozzarella.',
+          details: {
+            serves: '4',
+            course: 'Main',
+            prepare: '20 min',
+            cook: '15 min',
+            totalTime: '35 min'
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '480' },
+            { nutrient: 'Total Fat', amount: '25g' },
+            { nutrient: 'Saturated Fat', amount: '12g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/meatpizzaexample'
+        },
+        // Add more pizza or chicken recipes as needed
+        // Example for chicken recipe
+        'GrilledChicken': {
+          name: 'Grilled Chicken',
+          image: './All images/circle images/Chicken/grilled chicken.jpg',
+          rating: '4.9 ★★★★★',
+          reviews: '(18 Reviews)',
+          photos: '(5 Photos)',
+          process: '1. Marinate the chicken. 2. Preheat the grill. 3. Grill the chicken until fully cooked, about 6 minutes per side.',
+          ingredients: '1. 4 chicken breasts. 2. 2 tbsp olive oil. 3. 1 tbsp lemon juice. 4. 2 tsp garlic powder. 5. Salt and pepper to taste.',
+          details: {
+            serves: '4',
+            course: 'Main',
+            prepare: '10 min',
+            cook: '15 min',
+            totalTime: '25 min'
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+        'Chicken Curry': {
+          name: 'Chicken Curry',
+          image: './All images/circle images/Chicken/Chicken-Curry-1.jpg',
+          rating: '4.8 ★★★★☆',
+          reviews: '(25 Reviews)',
+          photos: '(7 Photos)',
+          process: '1. Heat oil and sauté onions. 2. Add spices and chicken. 3. Cook until chicken is browned. 4. Add tomatoes and simmer until chicken is cooked through.',
+          ingredients: '1. 500g chicken. 2. 2 onions, chopped. 3. 3 tomatoes, chopped. 4. 2 tsp ginger-garlic paste. 5. 2 tsp curry powder. 6. Salt and pepper to taste.',
+          details: {
+            serves: '4',
+            course: 'Main',
+            prepare: '15 min',
+            cook: '30 min',
+            totalTime: '45 min'
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+        ButterChicken: {
+          name: "Butter Chicken",
+          rating: "4.8 ★★★★☆",
+          reviews: "(25 Reviews)",
+          photos: "(5 Photos)",
+          image: "./All imges/circle imges/chicken/Butter-Chicken-2-1.jpg",
+          process: "1. Marinate the chicken... 2. Cook the marinated chicken...",
+          ingredients: "Chicken, Yogurt, Spices, Butter, Cream...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "20 mins",
+            cook: "40 mins",
+            totalTime: "1 hr"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+        ChickenCurry: {
+          name: "Chicken Curry",
+          rating: "4.7 ★★★★☆",
+          reviews: "(30 Reviews)",
+          photos: "(8 Photos)",
+          image: "./All imges/circle imges/chicken/Chicken-Curry-1.jpg",
+          process: "1. Heat oil... 2. Add onions and spices...",
+          ingredients: "Chicken, Onions, Tomatoes, Spices...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "15 mins",
+            cook: "45 mins",
+            totalTime: "1 hr"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+        TandooriChicken: {
+          name: "Tandoori Chicken",
+          rating: "4.8 ★★★★☆",
+          reviews: "(20 Reviews)",
+          photos: "(4 Photos)",
+          image: "./All imges/circle imges/chicken/tandoori chicken.jpg",
+          process: "1. Marinate chicken... 2. Grill the chicken...",
+          ingredients: "Chicken, Yogurt, Spices, Lemon...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "30 mins",
+            cook: "20 mins",
+            totalTime: "50 mins"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+        KungPaoChicken: {
+          name: "Kung Pao Chicken",
+          rating: "4.6 ★★★★☆",
+          reviews: "(15 Reviews)",
+          photos: "(3 Photos)",
+          image: "./All imges/circle imges/chicken/kung-pao-chicken-6.jpg",
+          process: "1. Stir-fry chicken... 2. Add peanuts and sauce...",
+          ingredients: "Chicken, Peanuts, Bell Peppers, Soy Sauce...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "20 mins",
+            cook: "15 mins",
+            totalTime: "35 mins"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+        SatayChicken: {
+          name: "Satay Chicken",
+          rating: "4.7 ★★★★☆",
+          reviews: "(18 Reviews)",
+          photos: "(5 Photos)",
+          image: "./All imges/circle imges/chicken/chicken-satay-skewers.jpg",
+          process: "1. Prepare marinade... 2. Skewer and grill chicken...",
+          ingredients: "Chicken, Peanut Butter, Soy Sauce, Spices...",
+          details: {
+            serves: 4,
+            course: "Appetizer",
+            prepare: "25 mins",
+            cook: "10 mins",
+            totalTime: "35 mins"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+        ChickenAdobo: {
+          name: "Chicken Adobo",
+          rating: "4.9 ★★★★★",
+          reviews: "(22 Reviews)",
+          photos: "(6 Photos)",
+          image: "./All imges/circle imges/chicken/Filipino-chicken-adobo-recipe1.jpg",
+          process: "1. Sear chicken... 2. Simmer with vinegar and soy sauce...",
+          ingredients: "Chicken, Vinegar, Soy Sauce, Garlic...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "10 mins",
+            cook: "50 mins",
+            totalTime: "1 hr"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+        TeriyakiChicken: {
+          name: "Teriyaki Chicken",
+          rating: "4.6 ★★★★☆",
+          reviews: "(19 Reviews)",
+          photos: "(4 Photos)",
+          image: "./All imges/circle imges/chicken/chicken-teriyaki4.jpg",
+          process: "1. Marinate chicken... 2. Grill or bake...",
+          ingredients: "Chicken, Teriyaki Sauce, Garlic, Ginger...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "15 mins",
+            cook: "20 mins",
+            totalTime: "35 mins"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+
+        ChickenTikkaMasala: {
+          name: "Chicken Tikka Masala",
+          rating: "4.8 ★★★★☆",
+          reviews: "(32 Reviews)",
+          photos: "(6 Photos)",
+          image: "./All imges/circle imges/chicken/chicken_tikka_.jpg",
+          process: "1. Marinate chicken... 2. Cook with tomato sauce...",
+          ingredients: "Chicken, Yogurt, Tomato Sauce, Spices...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "20 mins",
+            cook: "40 mins",
+            totalTime: "1 hr"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+
+        ChickenCordonBleu: {
+          name: "Chicken Cordon Bleu",
+          rating: "4.7 ★★★★☆",
+          reviews: "(17 Reviews)",
+          photos: "(3 Photos)",
+          image: "./All imges/circle imges/chicken/chicken-cordon-bleu.jpg",
+          process: "1. Stuff chicken with ham and cheese... 2. Bake until golden...",
+          ingredients: "Chicken, Ham, Cheese, Breadcrumbs...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "20 mins",
+            cook: "30 mins",
+            totalTime: "50 mins"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+        ChickenBiryani: {
+          name: "Chicken Biryani",
+          rating: "4.9 ★★★★★",
+          reviews: "(25 Reviews)",
+          photos: "(5 Photos)",
+          image: "./All imges/circle imges/chicken/chicken biryani2.jpg",
+          process: "1. Cook rice and chicken separately... 2. Layer and cook together...",
+          ingredients: "Chicken, Basmati Rice, Spices, Yogurt...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "30 mins",
+            cook: "40 mins",
+            totalTime: "1 hr 10 mins"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+        CoqAuVin: {
+          name: "Coq au Vin",
+          rating: "4.6 ★★★★☆",
+          reviews: "(14 Reviews)",
+          photos: "(4 Photos)",
+          image: "./All imges/circle imges/chicken/coq-au-vin-3740fe3.jpg",
+          process: "1. Sear chicken... 2. Cook with wine and vegetables...",
+          ingredients: "Chicken, Red Wine, Mushrooms, Onions...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "20 mins",
+            cook: "1 hr",
+            totalTime: "1 hr 20 mins"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+        ChickenSchnitzel: {
+          name: "Chicken Schnitzel",
+          rating: "4.7 ★★★★☆",
+          reviews: "(16 Reviews)",
+          photos: "(3 Photos)",
+          image: "./All imges/circle imges/chicken/Chicken-Schnitzel.jpg",
+          process: "1. Bread and fry chicken cutlets...",
+          ingredients: "Chicken, Breadcrumbs, Eggs, Flour...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "15 mins",
+            cook: "20 mins",
+            totalTime: "35 mins"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+        ChickenPaprikash: {
+          name: "Chicken Paprikash",
+          rating: "4.7 ★★★★☆",
+          reviews: "(12 Reviews)",
+          photos: "(4 Photos)",
+          image: "./All imges/circle imges/chicken/Hungarian-chicken-paprikash-recipe.jpg",
+          process: "1. Brown chicken... 2. Simmer in paprika sauce...",
+          ingredients: "Chicken, Paprika, Onions, Sour Cream...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "15 mins",
+            cook: "35 mins",
+            totalTime: "50 mins"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        },
+
+        GeneralTsosChicken: {
+          name: "General Tso's Chicken",
+          rating: "4.5 ★★★★☆",
+          reviews: "(28 Reviews)",
+          photos: "(7 Photos)",
+          image: "./All imges/circle imges/chicken/teo chicken better .jpg",
+          process: "1. Fry chicken pieces... 2. Toss in sauce...",
+          ingredients: "Chicken, Soy Sauce, Ginger, Garlic...",
+          details: {
+            serves: 4,
+            course: "Main",
+            prepare: "20 mins",
+            cook: "25 mins",
+            totalTime: "45 mins"
+          },
+          nutrition: [
+            { nutrient: 'Calories', amount: '250' },
+            { nutrient: 'Total Fat', amount: '10g' },
+            { nutrient: 'Saturated Fat', amount: '4g' }
+            // Add more nutrition facts here
+          ],
+          videoUrl: 'https://www.youtube.com/embed/anotherexample'
+        }
+
+
+        // Add more chicken recipes here
+      };
+
+      // Populate the page with recipe details
+      const recipe = recipeData[recipeName];
+
+      if (recipe) {
+        document.getElementById('recipe-name').textContent = recipe.name;
+        document.getElementById('recipe-image').src = recipe.image;
+        document.getElementById('recipe-rating').textContent = recipe.rating;
+        document.getElementById('recipe-reviews').textContent = recipe.reviews;
+        document.getElementById('recipe-photos').textContent = recipe.photos;
+        document.getElementById('recipe-process').textContent = recipe.process;
+        document.getElementById('recipe-ingredients').textContent = recipe.ingredients;
+
+        const detailsTableBody = document.getElementById('recipe-details');
+        detailsTableBody.innerHTML = `
+          <tr><td>${recipe.details.serves}</td><td>${recipe.details.course}</td><td>${recipe.details.prepare}</td><td>${recipe.details.cook}</td><td>${recipe.details.totalTime}</td></tr>
+        `;
+
+        const nutritionTableBody = document.getElementById('nutrition-facts');
+        recipe.nutrition.forEach(fact => {
+          nutritionTableBody.innerHTML += `
+            <tr><td>${fact.nutrient}</td><td>${fact.amount}</td></tr>
+          `;
+        });
+
+        document.getElementById('recipe-video').src = recipe.videoUrl;
+      } else {
+        document.querySelector('.recipe-details-container').innerHTML = '<p>Recipe not found.</p>';
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>

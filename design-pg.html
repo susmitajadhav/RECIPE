@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./design-pg.css">
+    <script src="./app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="#"><u>Home</u></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Cuisine
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Indian</a></li>
+                            <li><a class="dropdown-item" href="#">Mexican</a></li>
+                            <li><a class="dropdown-item" href="#">Chinese</a></li>
+                            <li><a class="dropdown-item" href="#">Japanese</a></li>
+                            <li><a class="dropdown-item" href="#">Italian</a></li>
+                            <li><a class="dropdown-item" href="#">French</a></li>
+                            <li><a class="dropdown-item" href="#">Thai</a></li>
+                            <li><a class="dropdown-item" href="#">Spanish</a></li>
+                            <li><a class="dropdown-item" href="#">Greek</a></li>
+                            <li><a class="dropdown-item" href="#">Spain</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Ingredient
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Chicken</a>
+                            <a class="dropdown-item" href="#">Mutton</a>
+                            <a class="dropdown-item" href="#">Vegetables</a>
+                            <a class="dropdown-item" href="#">Fruits</a>
+                            <a class="dropdown-item" href="#">Seafood</a>
+                            <a class="dropdown-item" href="#">Pasta</a>
+                            <a class="dropdown-item" href="#">Beef</a>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Meal
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Breakfast</a>
+                            <a class="dropdown-item" href="#">Lunch</a>
+                            <a class="dropdown-item" href="#">Snacks</a>
+                            <a class="dropdown-item" href="#">Dessert</a>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dinner
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Vegetarian</a>
+                            <a class="dropdown-item" href="#">Non-Vegetarian</a>
+                            <a class="dropdown-item" href="#">Seafood</a>
+                            <a class="dropdown-item" href="#">Pasta</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled " href="#" tabindex="-1" aria-disabled="true">About us</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success " type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container1">
+        <div class="col-md-3 mb-3">
+            <div class="row">
+                <aside class="filters">
+                    <h3 class="filters-title">Filters</h3>
+
+                    <div class="filter">
+                        <label class="filter-label">
+                            <a href="C:\Users\SAI\Desktop\Company\Dish-img\maharashtra.html"></a>
+                            <input type="checkbox" name="diet" value="vegetarian" id="vegetarian" />
+                            <span class="checkmark"></span>
+                            Vegetarian
+                        </label>
+                    </div>
+                    <div class="filter">
+                        <label class="filter-label">
+                            <input type="checkbox" name="diet" value="non-vegetarian" id="non-vegetarian" />
+                            <span class="checkmark"></span>
+                            Non Vegetarian
+                        </label>
+                    </div>
+                    <div class="filter">
+                        <label class="filter-label">
+                            <input type="checkbox" name="diet" value="vegan" id="vegan" />
+                            <span class="checkmark"></span>
+                            Vegan
+                        </label>
+                    </div>
+
+                    <div class="filter">
+                        <label class="filter-label">Price Range</label>
+                        <input type="range" class="filter-slider" min="0" max="100" />
+                    </div>
+
+                    <div class="filter">
+                        <label class="filter-label">Country</label>
+                        <select name="country" class="filter-select">
+                            <option value="india">India</option>
+                            <option value="china">China</option>
+                            <option value="england">England</option>
+                            <option value="australia">Australia</option>
+                            <option value="japan">Japan</option>
+                            <option value="russia">Russia</option>
+                            <option value="usa">USA</option>
+                            <option value="france">France</option>
+                            <option value="italy">Italy</option>
+                            <option value="mexico">Mexico</option>
+                        </select>
+                    </div>
+
+                    <div class="filter">
+                        <label class="filter-label">Meal Type</label>
+                        <select name="mealType" class="filter-select">
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="snacks">Snacks</option>
+                            <option value="desserts">Desserts</option>
+                            <option value="appetizers">Appetizers</option>
+                        </select>
+                    </div>
+
+                    <div class="filter">
+                        <label class="filter-label">Cooking Time</label>
+                        <select class="filter-select">
+                            <option value="under-30">Under 30 minutes</option>
+                            <option value="30-60">30-60 minutes</option>
+                            <option value="over-60">Over 60 minutes</option>
+                        </select>
+                    </div>
+
+                    <div class="filter">
+                        <label class="filter-label">Difficulty Level</label>
+                        <select class="filter-select">
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+
+                    <div class="filter">
+                        <label class="filter-label">Calories Range</label>
+                        <input type="range" class="filter-slider" min="0" max="1000" />
+                    </div>
+
+                    <div class="filter">
+                        <label class="filter-label">Ingredients</label>
+                        <input type="text" class="filter-input" />
+                    </div>
+
+                    <button class="filter-apply">
+                        Apply Filters
+                    </button>
+                </aside>
+            </div>
+
+        </div>
+
+
+    <div class="row1">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+            <a href="./India.html">
+                <div class="card1">
+                    <div class="wrapper">
+                        <img src="./All imges/State name/indai.jpg" class="cover-image" />
+                    </div>
+                    <img src="./All imges/maharshtra/Bhel-Puri.jpg" class="character" />
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <a href="./china.html">
+                <div class="card1">
+                    <div class="wrapper">
+                        <img src="./All imges/State name/china.jpg" class="cover-image" />
+                    </div>
+                    <img src="./All imges/Andhra Pradesh/Gongura Chicken.jpg" class="character" />
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <a href="./french.html">
+                <div class="card1">
+                    <div class="wrapper">
+                        <img src="./All imges/State name/frances.jpg" class="cover-image" />
+                    </div>
+                    <img src="./All imges/maharshtra/Bhel-Puri.jpg" class="character" />
+                </div>
+            </a>
+        </div>
+
+        <!-- Repeat cards as needed -->
+        <!-- Card 4 -->
+        <div class="col-md-4 mb-4">
+            <a href="./spanish.html" alt="Mythrill" target="_blank">
+                <div class="card1">
+                    <div class="wrapper">
+                        <img src="./All imges/State name/span.jpg" class="cover-image" />
+                    </div>
+                    <img src="./All imges/Andhra Pradesh/Gongura Chicken.jpg" class="character" />
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-4 mb-4">
+            <a href="./greek.html" alt="Mythrill" target="_blank">
+                <div class="card1">
+                    <div class="wrapper">
+                        <img src="./All imges/State name/greek.jpg" class="cover-image" />
+                    </div>
+                    <img src="./All imges/maharshtra/Bhel-Puri.jpg" class="character" />
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-4 mb-4">
+            <a href="thai.html" alt="Mythrill" target="_blank">
+                <div class="card1">
+                    <div class="wrapper">
+                        <img src="./All imges/State name/thaland.jpg" class="cover-image" />
+                    </div>
+                    <img src="./All imges/Andhra Pradesh/Gongura Chicken.jpg" class="character" />
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-4 mb-4">
+            <a href="./italic.html" alt="Mythrill" target="_blank">
+                <div class="card1">
+                    <div class="wrapper">
+                        <img src="./All imges/State name/italay.jpg" class="cover-image" />
+                    </div>
+                    <img src="./All imges/maharshtra/Bhel-Puri.jpg" class="character" />
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-4 mb-4">
+            <a href="japnese.html" alt="Mythrill" target="_blank">
+                <div class="card1">
+                    <div class="wrapper">
+                        <img src="./All imges/State name/japan.jpg" class="cover-image" />
+                    </div>
+                    <img src="./All imges/Andhra Pradesh/Gongura Chicken.jpg" class="character" />
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-4 mb-4">
+            <a href="C:\Users\SAI\Desktop\Company\Dish-img\japnese.html" alt="Mythrill" target="_blank">
+                <div class="card1">
+                    <div class="wrapper">
+                        <img src="./All imges/State name/japan.jpg" class="cover-image" />
+                    </div>
+                    <img src="./All imges/Andhra Pradesh/Gongura Chicken.jpg" class="character" />
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <!-- <div class="footer-section"> -->
+            <h4>Contact Us</h4>
+            <p>Email: example@example.com</p>
+            <p>Phone: +1 234 567 890</p>
+
+            <h4>Newsletter Signup</h4>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul class="social-links">
+                <li><a href="#" target="_blank">Facebook</a></li>
+                <li><a href="#" target="_blank">Twitter</a></li>
+                <li><a href="#" target="_blank">Instagram</a></li>
+                <li><a href="#" target="_blank">You Tude</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Recipe Haven. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+AOS.init({
+    duration: 1000, // Animation duration in milliseconds
+});
+</script>
+</body>
+</html>

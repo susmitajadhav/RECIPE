@@ -1,0 +1,325 @@
+/* recipedetails.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Body Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  /* Ensure box-sizing includes padding and border in the width and height */
+}
+
+/* Container */
+.recipe-details-container {
+  width: 100%;
+  /* Full viewport width */
+  margin: 0;
+  /* Remove default margin */
+  padding: 15px;
+  /* background-color: #ffdab9; */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #000;
+  /* Default font color set to black */
+  box-sizing: border-box;
+  /* Includes padding in the width calculation */
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.recipe-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #d61243;
+  /* Title color set to black */
+}
+
+.rating-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #000;
+  /* Rating section color set to black */
+}
+
+.rating {
+  font-size: 24px;
+  color: #ffb400;
+  margin-right: 10px;
+}
+
+.reviews,
+.photos {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.image-container {
+  display: flex;
+}
+
+.left-section {
+  margin-left: 4rem;
+}
+
+/* Image Container */
+
+.image-container .process-container {
+  display: flex;
+}
+
+.left-section img {
+  max-width: 100%;
+  width: 550px;
+  height: 450px;
+  border-radius: 10px;
+}
+
+
+.process-container {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Recipe Table */
+.recipe-table {
+  width: 80%;
+  border-collapse: collapse;
+  color: #000;
+}
+
+.recipe-table th,
+.recipe-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.recipe-table th {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+/* Right Section */
+.right-section {
+  width: 50%;
+  margin-left: 2rem;
+}
+
+
+.ingredients-container {
+  width: 50%;
+}
+
+.ingredients-container pre {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Nutrition Facts Table */
+.nutrition-table {
+  width: 80%;
+  border-collapse: collapse;
+  color: #000;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.nutrition-table th {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+
+/* User Comment Section */
+.user-comment {
+  margin-top: 30px;
+}
+
+.user-comment label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  /* Label color set to black */
+}
+
+.user-comment textarea {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  /* Textarea text color set to black */
+}
+
+.user-comment button {
+  margin-top: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.user-comment button:hover {
+  background-color: #0056b3;
+}
+
+.rating-section {
+  font-size: 18px;
+  color: #000;
+}
+
+.form-group textarea {
+  width: 90%;
+
+}
+
+/* Buttons */
+.rating-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.rating-buttons button {
+  background-color: #f80036;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.rating-buttons button:hover {
+  background-color: #d61243;
+}
+
+.review-section {
+  margin-top: 30px;
+  margin-left: 4rem;
+}
+
+.review-section h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000;
+  /* Review section headings color set to black */
+}
+
+.rating-input {
+  margin-bottom: 10px;
+}
+
+.rating-input .form-check-label {
+  font-size: 24px;
+  color: #000;
+  /* Rating input label color set to black */
+}
+
+.submit-button {
+  margin-top: 15px;
+  background-color: #f80036;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #d61243;
+}
+
+.ratings-summary {
+  font-size: 16px;
+  color: #000;
+  /* Ratings summary text color set to black */
+}
+
+.ratings-summary h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000;
+  /* Ratings summary heading color set to black */
+}
+
+.ratings-summary div {
+  margin-bottom: 5px;
+  color: #000;
+  /* Ratings summary div color set to black */
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-right: 9REM;
+  align-items: center;
+}
+
+.fancy-button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #f80036;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fancy-button:hover {
+  background-color: #d61243;
+}
+
+/* YouTube Video Container */
+.youtube-container {
+  margin-top: 30px;
+}
+
+.youtube-player {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.youtube-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+}

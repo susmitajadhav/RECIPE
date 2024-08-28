@@ -1,0 +1,347 @@
+
+.navbar-expand-lg {
+    height: 6rem;
+  }
+  
+  .navbar {
+    background-color: rgb(13, 173, 173);
+  
+  }
+  
+  .nav-item:hover {
+    text-decoration: rgb(13, 173, 173);
+  }
+  
+  ul .dropdown {
+    color: rgb(44, 17, 17);
+  }
+  
+  .navbar a {
+    color: black;
+    font-family: poppins sans-serif;
+    font-size: 1.3rem;
+  }
+  
+  .nav-item .nav-link.disabled {
+    color: rgb(8, 8, 8)
+  }
+  
+  .container1 {
+    background-color: #EAF8FB;
+    padding: 1rem;
+    display: flex;
+  }
+  
+  .row1 {
+    display: flex;
+    /* padding: rem; */
+    flex-wrap: wrap;
+  }
+  
+  .filters {
+    padding: 20px;
+    background-color: #ffffff; /* White background for a clean look */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px;
+    margin-left: 2rem;
+    position: sticky; /* Makes the filter sidebar sticky */
+    top: 0; /* Sticky at the top of the viewport */
+    
+  }
+  
+  .filters-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333; /* Darker color for title */
+    text-align: center; /* Center the title */
+    text-transform: uppercase; /* Uppercase for a modern look */
+    letter-spacing: 1px; /* Slight letter spacing for readability */
+  }
+  
+  .filter {
+    margin-bottom: 20px;
+  }
+  
+  .filter-label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #555; /* Slightly darker text */
+  }
+  
+  .filter-label input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .filter-label .checkmark {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #1f6575; /* Use orange color */
+    border-radius: 3px; /* Rounded checkmark */
+    margin-right: 10px;
+    background-color: #f0f0f0; /* Light background for checkmark */
+  }
+  
+  .filter-label input[type="checkbox"]:checked + .checkmark {
+    background-color: #32CD32; /* Green color */
+    border-color: #32CD32;
+  }
+  
+  .filter-slider {
+    width: 100%;
+    accent-color: #1f6575; 
+  }
+  
+  .filter-select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Light border */
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Darker text */
+    font-size: 1rem;
+  }
+  
+  .filter-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Light border */
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Darker text */
+    font-size: 1rem;
+  }
+  
+  .filter-apply {
+    width: 100%;
+    padding: 10px;
+    background-color: #1f6575; /* Orange color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .filter-apply:hover {
+    background-color: #E44F32; /* Darker shade of orange on hover */
+  }
+  
+  
+  :root {
+    --card-height: 300px;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background: #191c29;
+  }
+  
+  .card1 {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+  }
+  
+  .cover-image {
+    width: 100%;
+    height: 100%;
+    /* background-color:#DCECF4; */
+    object-fit: cover;
+  }
+  
+  .wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .card1:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  }
+  
+  .wrapper::before,
+  .wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+  }
+  
+  .wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to top,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5) 68%,
+        rgba(12, 13, 19) 97%);
+  }
+  
+  .wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(to bottom,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5) 68%,
+        rgba(12, 13, 19) 97%);
+  }
+  
+  .card1:hover .wrapper::before,
+  .wrapper::after {
+    opacity: 1;
+  }
+  
+  .card:hover .wrapper::after {
+    height: 120px;
+  }
+  
+  .title {
+    width: 100%;
+    transition: transform 0.5s;
+  }
+  
+  .card1:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+  }
+  
+  .character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .card1:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+  }
+  
+  
+/*footer*/
+footer {
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+}
+
+.footer-section ul li a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.newsletter-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1f6575;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.newsletter-form button:hover {
+  background-color: #0056b3;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links li {
+  margin: 5px 0;
+}
+
+.social-links a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: rgb(13, 173, 173);
+  ;
+  padding: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}

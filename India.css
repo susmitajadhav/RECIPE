@@ -1,0 +1,486 @@
+.navbar-expand-lg {
+  height: 6rem;
+}
+
+.navbar {
+  background-color: rgb(13, 173, 173);
+
+}
+
+.nav-item:hover {
+  text-decoration: rgb(13, 173, 173);
+}
+
+ul .dropdown {
+  color: rgb(44, 17, 17);
+}
+
+.navbar a {
+  color: black;
+  font-family: poppins sans-serif;
+  font-size: 1.3rem;
+}
+
+.nav-item .nav-link.disabled {
+  color: rgb(8, 8, 8)
+}
+.banner {
+  position: relative;
+  bottom: 8px;
+}
+
+.banner img {
+  width: 100vw;
+  height: 35rem;
+
+}
+
+.leftt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  transform: translate(-50%, -50%);
+  
+}
+
+.banner .leftt {
+  position: absolute;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #c0dbe6;
+  height: 35rem;
+  width: 100vw;
+  top: 50%;
+  left: 50%;
+}
+
+  
+ 
+
+
+
+
+
+.stauts {
+  max-width: 100%;
+  margin: 2rem auto;
+  /* Space between navbar and carousel */
+  padding: 0 1rem;
+
+}
+
+.owl-carousel {
+  display: flex;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  /* padding: 2rem; */
+}
+
+.stauts .slick-list {
+  overflow: hidden;
+  /* Hide overflowing elements */
+}
+
+.stauts .slick-slide {
+  padding: 0 0.5rem;
+  /* Horizontal padding between slides */
+}
+
+.stauts .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Center text within the container */
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.stauts .circle-image {
+  width: 180px;
+  /* Adjust the size as needed */
+  height: 180px;
+  /* Adjust the size as needed */
+  margin: 3px !important;
+  border-radius: 50%;
+  /* Make the image circular */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Add shadow to the image */
+  margin-bottom: 0.5rem;
+  /* Space between image and title */
+  border: 3px solid #ffffff4b;
+  /* White border around the image */
+  transition: border-color 0.3s ease;
+  /* Smooth transition for border color */
+}
+
+.stauts .circle-image:hover {
+  background-color: #84B74E;
+  /* Light gray border color on hover */
+}
+
+.stauts .image-title {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  /* width: 100vh; */
+  /* Ensure text takes full width of container */
+}
+
+.owl-prev, .owl-next {
+  margin-left: 10px !important;
+  margin-right:10px !important ;
+ /* padding: 20px !important; */
+}
+
+
+  
+  .container1 {
+    background-color: #EAF8FB;
+    padding: 1rem;
+    display: flex;
+  }
+  
+  .row1 {
+    display: flex;
+    /* padding: rem; */
+    flex-wrap: wrap;
+  }
+  
+  
+.filters {
+  padding: 20px;
+  background-color: #ffffff; /* White background for a clean look */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 20px;
+  margin-left: 2rem;
+  position: sticky; /* Makes the filter sidebar sticky */
+  top: 0; /* Sticky at the top of the viewport */
+  height: calc(100vh - 1rem); /* Adjust height to fit the viewport with padding */
+  
+}
+  .filters-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333; /* Darker color for title */
+    text-align: center; /* Center the title */
+    text-transform: uppercase; /* Uppercase for a modern look */
+    letter-spacing: 1px; /* Slight letter spacing for readability */
+  }
+  
+  .filter {
+    margin-bottom: 20px;
+  }
+  
+  .filter-label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #555; /* Slightly darker text */
+  }
+  
+  .filter-label input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .filter-label .checkmark {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #1f6575; /* Use orange color */
+    border-radius: 3px; /* Rounded checkmark */
+    margin-right: 10px;
+    background-color: #f0f0f0; /* Light background for checkmark */
+  }
+  
+  .filter-label input[type="checkbox"]:checked + .checkmark {
+    background-color: #32CD32; /* Green color */
+    border-color: #32CD32;
+  }
+  
+  .filter-slider {
+    width: 100%;
+    accent-color: #1f6575; /* Orange color for slider */
+  }
+  
+  .filter-select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Light border */
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Darker text */
+    font-size: 1rem;
+  }
+  
+  .filter-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Light border */
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Darker text */
+    font-size: 1rem;
+  }
+  
+  .filter-apply {
+    width: 100%;
+    padding: 10px;
+    background-color: #1f6575; /* Orange color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .filter-apply:hover {
+    background-color: #E44F32; /* Darker shade of orange on hover */
+  }
+  
+  
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  
+  .container2 {
+    width: 100%;
+    /* height: 20rem; */
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    /* padding: 2rem; */
+    flex-grow: 1;
+    margin-left: 4rem;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Space between cards */
+  }
+  
+  .col {
+    /* flex: 1 0 30%; Three cards per row */
+    display: flex;
+  }
+  
+  .card__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    /* width: 100%; */
+  }
+  
+  .card2 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: relative; /* For positioning text */
+  }
+  
+  .card2:hover {
+    transform: scale(1.05);
+  }
+  
+  .card__image-container {
+    /* height: 100%; */
+    overflow: hidden;
+    position: relative; /* Position text */
+  }
+  
+  .card__image {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .container1 {
+    background-color: #EAF8FB;
+    padding: 1rem;
+    display: flex;
+   
+    flex: 1;
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+.col-md-3 {
+    flex-basis: 25%;
+  
+    flex-shrink: 0;
+}
+
+.filters {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px;
+    margin-left: 2rem;
+    position: sticky; 
+    top: 0; 
+    height: calc(100vh - 1rem);
+    overflow-y: auto;
+}
+
+.container2 {
+    flex: 1; 
+    overflow-y: auto; 
+    padding: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; 
+}
+
+.col {
+    flex: 1 1 200px;
+    margin-bottom: 1rem;
+}
+
+.card2 {
+    width: 100%;
+}
+
+/*footer*/
+footer {
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+}
+
+.footer-section ul li a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.newsletter-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1f6575;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.newsletter-form button:hover {
+  background-color: #0056b3;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links li {
+  margin: 5px 0;
+}
+
+.social-links a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: rgb(13, 173, 173);
+  ;
+  padding: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
