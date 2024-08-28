@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Recipe Website</title>
+  <link rel="stylesheet" href="./rouf-pg.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Delicious Recipes</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home">
+    <div class="hero">
+      <h2>Welcome to Our Recipe Collection</h2>
+      <p>Discover a variety of recipes from around the world.</p>
+    </div>
+  </section>
+
+  <section id="recipes" class="container">
+    <h2>Our Recipes</h2>
+    <div class="recipe-card">
+      <img src="./All imges/circle imges/chicken-biryani.png!sw800" alt="Recipe 1">
+      <div class="recipe-info">
+        <h3>Recipe 1</h3>
+        <p class="recipe-description">A brief description of Recipe 1.</p>
+        <a href="#recipe1-details" class="recipe-link">View Recipe</a>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="./All imges/circle imges/chicken-biryani.png!sw800" alt="Recipe 2">
+      <div class="recipe-info">
+        <h3>Recipe 2</h3>
+        <p class="recipe-description">A brief description of Recipe 2.</p>
+        <a href="#recipe2-details" class="recipe-link">View Recipe</a>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="./All imges/circle imges/chicken-biryani.png!sw800" alt="Recipe 3">
+      <div class="recipe-info">
+        <h3>Recipe 3</h3>
+        <p class="recipe-description">A brief description of Recipe 3.</p>
+        <a href="#recipe3-details" class="recipe-link">View Recipe</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>We are passionate about sharing delicious recipes and helping you become a better cook.</p>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <form action="submit_form.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Delicious Recipes. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

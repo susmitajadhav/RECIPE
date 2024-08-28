@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Grid</title>
+    <link rel="stylesheet" href="Sikkim.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="#"><u>Home</u></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Cuisine
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Indian</a></li>
+                            <li><a class="dropdown-item" href="#">Mexican</a></li>
+                            <li><a class="dropdown-item" href="#">Chinese</a></li>
+                            <li><a class="dropdown-item" href="#">Japanese</a></li>
+                            <li><a class="dropdown-item" href="#">Italian</a></li>
+                            <li><a class="dropdown-item" href="#">French</a></li>
+                            <li><a class="dropdown-item" href="#">Thai</a></li>
+                            <li><a class="dropdown-item" href="#">Spanish</a></li>
+                            <li><a class="dropdown-item" href="#">Greek</a></li>
+                            <li><a class="dropdown-item" href="#">Spain</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Ingredient
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Chicken</a>
+                            <a class="dropdown-item" href="#">Mutton</a>
+                            <a class="dropdown-item" href="#">Vegetables</a>
+                            <a class="dropdown-item" href="#">Fruits</a>
+                            <a class="dropdown-item" href="#">Seafood</a>
+                            <a class="dropdown-item" href="#">Pasta</a>
+                            <a class="dropdown-item" href="#">Beef</a>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Meal
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Breakfast</a>
+                            <a class="dropdown-item" href="#">Lunch</a>
+                            <a class="dropdown-item" href="#">Snacks</a>
+                            <a class="dropdown-item" href="#">Dessert</a>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dinner
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Vegetarian</a>
+                            <a class="dropdown-item" href="#">Non-Vegetarian</a>
+                            <a class="dropdown-item" href="#">Seafood</a>
+                            <a class="dropdown-item" href="#">Pasta</a>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled " href="#" tabindex="-1" aria-disabled="true">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled " href="#" tabindex="-1" aria-disabled="true">About us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success " type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+   
+    <div class="banner">
+        <img src="./All imges/indian-country-img/sikham.JPG" alt="">
+        <div class="left">"Sikkim"</div>
+    </div>
+
+
+
+   
+    <div class="container-row ">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="1"></i>
+                    <img src="./All imges/Aasam/aloo-bharta-Indian-mashed-potato.jpg" class="card-img-top"
+                        alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Chow Mein</h5>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="2"></i>
+                    <img src="./All imges/Aasam/assam laksa.jpg" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Hakka Noodles</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="3"></i>
+                    <img src="./All imges/Aasam/AssamChicken-Curry1.jpg" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Veg Noodles</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="4"></i>
+                    <img src="./All imges/Aasam/Assamese-Khar.jpeg" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Chicken Noodles</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- Card 1 -->
+   
+        <div class="row">
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="1"></i>
+                    <img src="./All imges/Aasam/bambo curry.jpg" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="2"></i>
+                    <img src="./All imges/Aasam/Chingri-Malaikari.jpg" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Feijoada</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="3"></i>
+                    <img src="./All imges/Aasam/duck kari.jpg" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Filipino chicken adobo </h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="4"></i>
+                    <img src="./All imges/Aasam/fish Curry-tomato.jpg" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Fish Recheado</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="1"></i>
+                    <img src="./All imges/Aasam/Homemade-Ghost-Pepper-Chili-.jpg" class="card-img-top"
+                        alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Goan Fish Curry</h5>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="2"></i>
+                    <img src="./All imges/Aasam/Lentil-Vegetable-Stew.jpg" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Goan Nevri</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="3"></i>
+                    <img src="./All imges/Aasam/masor tenga fish.jpg" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Goan Prawn Pulao</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="4"></i>
+                    <img src="./All imges/Aasam/Pakhala-Bhata.webp" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Goan Sausage Pulao</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <div class="row">
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="1"></i>
+                    <img src="./All imges/Aasam/silkworms.jpg" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Kasa Achar</h5>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="2"></i>
+                    <img src="./All imges/Aasam/tenga fish curry.jpg" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Khatkhate</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="3"></i>
+                    <img src="./All imges/Aasam/Til-Pitha-main1.jpg" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Mushroom Xacuti</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <i class="fas fa-heart wishlist-icon outlined" data-id="4"></i>
+                    <img src="/All imges/Aasam/" class="card-img-top" alt="Bhel Puri dish" />
+                    <div class="card-body">
+                        <h5 class="card-title">Patolea</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <!-- <div class="footer-section"> -->
+                <h4>Contact Us</h4>
+                <p>Email: example@example.com</p>
+                <p>Phone: +1 234 567 890</p>
+
+                <h4>Newsletter Signup</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul class="social-links">
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">You Tude</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Recipe Haven. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.filter-apply').addEventListener('click', () => {
+            const diet = document.querySelector('input[name="diet"]:checked')?.value || '';
+            const country = document.querySelector('select[name="country"]').value;
+            const mealType = document.querySelector('select[name="mealType"]').value;
+
+            if (diet === 'vegetarian' && country === 'india' && mealType === 'breakfast') {
+                window.location.href = '/vegetarian-breakfast';
+            } else if (diet === 'vegetarian' && country === 'india' && mealType === 'lunch') {
+                window.location.href = '/india/vegetarian-lunch';
+            } else if (diet === 'vegetarian' && country === 'india' && mealType === 'dinner') {
+                window.location.href = '/india/vegetarian-dinner';
+            } else if (diet === 'vegetarian' && country === 'india' && mealType === 'snacks') {
+                window.location.href = '/india/vegetarian-snacks';
+            } else if (diet === 'non-vegetarian' && country === 'india' && mealType === 'breakfast') {
+                window.location.href = '/india/non-vegetarian-breakfast';
+            } else if (diet === 'non-vegetarian' && country === 'india' && mealType === 'lunch') {
+                window.location.href = '/india/non-vegetarian-lunch';
+            } else if (diet === 'non-vegetarian' && country === 'india' && mealType === 'dinner') {
+                window.location.href = '/india/non-vegetarian-dinner';
+            } else if (diet === 'non-vegetarian' && country === 'india' && mealType === 'snacks') {
+                window.location.href = '/india/non-vegetarian-snacks';
+            } else {
+                console.log('Filters applied but no matching route found.');
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+        });
+    </script>
+</body>
+
+</html>

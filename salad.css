@@ -1,0 +1,139 @@
+.navbar-expand-lg {
+    height: 6rem;
+  }
+  .nav-item .a {
+    /* text-decoration: black; */
+  }
+  .navbar {
+    /* background-color: rgb(187, 95, 110); */
+    background-color: #EAF8FB;
+    /* text-decoration: black ; */
+  }
+  
+  .nav-item:hover {
+    text-decoration: rgb(13, 173, 173);
+  }
+ 
+  .banner {
+    position: relative;
+    bottom: 8px;
+  }
+  
+  .banner img {
+    width: 100vw;
+    height: 35rem;
+  
+  }
+  
+  .left {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    transform: translate(-50%, -50%);
+  }
+  
+  .banner .left {
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    height: 35rem;
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .container1 {
+    background-color: #EAF8FB;
+    padding: 1rem;
+    display: flex;
+  }
+  
+  .row1 {
+    display: flex;
+    /* padding: rem; */
+    flex-wrap: wrap;
+  }
+  
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  
+  .container2 {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 2rem; */
+    flex-grow: 1;
+    /* margin-left: 4rem; */
+  }
+  
+  .row {
+    /* display: flex; */
+    flex-wrap: wrap;
+    /* gap: 1rem; Space between cards */
+  }
+  
+  .col {
+    /* flex: 1 0 30%; Three cards per row */
+
+  }
+  
+  .card__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    /* width: 100%; */
+  }
+  
+  .card2 {
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 300px; /* Adjust as needed */
+    position: relative; /* For positioning text */
+  }
+  
+  .card2:hover {
+    transform: scale(1.05);
+  }
+  
+  .card__image-container {
+    height: 100%;
+    overflow: hidden;
+    position: relative; /* Position text */
+  }
+  
+  .card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+  }
